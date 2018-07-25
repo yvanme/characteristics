@@ -1,4 +1,4 @@
-package com.loong;
+package com.loong.list;
 
 import java.util.Arrays;
 import java.util.Comparator;
