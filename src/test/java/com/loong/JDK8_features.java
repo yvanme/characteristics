@@ -12,8 +12,7 @@ import java.util.function.Supplier;
 
 public class JDK8_features {
 
-    public List<Integer> list = new ArrayList(){{add(1);add(2);add(3);add(4);add(5);add(6);add(7);add(8);}};
-
+        List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
     /**
      * 1.Lambda表达式
@@ -29,8 +28,8 @@ public class JDK8_features {
      */
     @Test
     public void testStream(){
-        List<Integer> nums = new ArrayList(){{add(1);add(1);add(null);add(2);add(3);add(4);add(null);add(5);add(6);add(7);add(8);add(9);}};
-        //List<Integer> nums = Lists.newArrayList(1,1,null,2,3,4,null,5,6,7,8,9,10);
+
+        List<Integer> nums = Arrays.asList(1,1,null,2,3,4,null,5,6,7,8,9,10);
         System.out.println("求和："+nums
                 .stream()//转成Stream
                 .filter(team -> team!=null)//过滤

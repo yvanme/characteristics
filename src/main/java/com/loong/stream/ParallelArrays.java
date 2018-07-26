@@ -1,7 +1,12 @@
 package com.loong.stream;
 
 
+import com.sun.webkit.Timer;
+
+import java.time.Duration;
 import java.util.Arrays;
+import java.util.Properties;
+import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ParallelArrays {
@@ -17,7 +22,13 @@ public class ParallelArrays {
         Arrays.parallelSort( arrayOfLong );
         Arrays.stream( arrayOfLong ).limit( 10 ).forEach(
                 i -> System.out.print( i + " " ) );
-        System.out.println();
+        System.out.println("UUID:");
+        UUID uuid = UUID.randomUUID();
+        System.out.println(uuid);
+        System.out.println(uuid.toString());
+
+
     }
+
 }
 
