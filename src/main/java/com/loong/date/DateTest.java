@@ -1,6 +1,7 @@
 package com.loong.date;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
 
 public class DateTest {
     public static void main(String[] args) {
@@ -40,6 +41,11 @@ public class DateTest {
         System.out.println( "Duration in days: " + duration.toDays() );
         System.out.println( "Duration in hours: " + duration.toHours() );
 
+        LocalDate localDate;
+        System.out.println(LocalDate.now());
 
+        localDate = LocalDate.now().minus(1, ChronoUnit.DAYS);
+
+        System.out.println(localDate);
     }
 }
